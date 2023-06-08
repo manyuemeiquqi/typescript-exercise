@@ -1,6 +1,21 @@
-Pick and Omit 
+Pick and Omit  
+Partial and Required
 
-opposite
+
+
+是一对相反的 高级类型 opposite
+
+
+
+
+
+
+
+
+Awaited
+Promise 给 promise 用的 意图获取promise的返回value 
+
+
 
 
 
