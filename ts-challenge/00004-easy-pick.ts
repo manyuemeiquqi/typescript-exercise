@@ -25,4 +25,6 @@ interface Expected2 {
 
 
 // ============= Your Code Here =============
-type MyPick<T, K> ={[Property   in keyof T  extends K?Property:never ]:T[Property]}
+type MyPick<T, K extends keyof T> = {
+  [Q in K]:T[Q]
+}
