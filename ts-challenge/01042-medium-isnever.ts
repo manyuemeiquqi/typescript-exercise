@@ -13,4 +13,7 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type IsNever<T> = Equal<never,T>
+
+// https://github.com/microsoft/TypeScript/issues/31751#issuecomment-498526919
+// https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types
+type IsNever<T> = [T] extends [never]  ? true :false
