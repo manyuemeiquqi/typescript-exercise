@@ -12,4 +12,4 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type ReplaceFirst<T extends readonly unknown[], S, R> = T extends [infer A,... infer B] ? A extends S ? [R,...B] : [A,...ReplaceFirst<B,S,R>]
+type ReplaceFirst<T extends readonly unknown[], S, R> = T extends [infer A,... infer B] ? A extends S ? [R,...B] : [A,...ReplaceFirst<B,S,R>] : T
