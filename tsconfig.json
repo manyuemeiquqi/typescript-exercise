@@ -7,6 +7,6 @@
     "rootDir": "./",
     "strict": true,
     "noEmit": true,
-    "noImplicitThis": true
+    "noImplicitThis": true,
   }
 }
