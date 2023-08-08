@@ -18,5 +18,7 @@ type ModifierKeys = ['cmd', 'ctrl', 'opt', 'fn']
 //   T extends [infer F extends string, ...infer R extends string[]] ?
 //   `${F} ${R[number]}` | Combs<R> : never;
 
+
+// 看了题解，比较难想的一点是这里直接可通过`${F} ${Res[number]}` 结合构造出union
   type Combs<T = ModifierKeys> =
    T extends [infer F extends string,...infer Res extends string[]] ? `${F} ${Res[number]}`|Combs<Res> : never 
