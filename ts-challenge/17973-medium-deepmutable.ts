@@ -78,6 +78,13 @@ type errors = [
 
 
 // ============= Your Code Here =============
-type DeepMutable<T extends object> = T extends Function ? T : T extends object ? {
+type DeepMutable<T extends Record<string,any>> = T extends Function ? T : T extends object ? {
   -readonly[P in keyof T] : DeepMutable<T[P]>
 } : T
+
+// type DeepMutable<T extends Record<keyof any,any>> =
+//   T extends (...args:any[])=>any?
+//     T:
+//     {
+//       - readonly [K in keyof T]:DeepMutable<T[K]>
+//     }
