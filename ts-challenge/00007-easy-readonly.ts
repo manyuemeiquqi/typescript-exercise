@@ -14,7 +14,7 @@ interface Todo1 {
   }
 }
 
-
+ 
 // ============= Your Code Here =============
 type MyReadonly<T> = {
   readonly [Index in keyof T]: T[Index]
