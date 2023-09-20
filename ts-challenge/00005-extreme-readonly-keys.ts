@@ -36,7 +36,7 @@ export type ExpandRecursively<T> = T extends object
   : T
 
 /** Expand a type */
-export type a= ExpandRecursively<GetReadonlyKeys<Todo1>> 
+export type ExpandTodo= ExpandRecursively<GetReadonlyKeys<Todo1>> 
 
 /** Expand a type using Omit */
-// export type Expand<T> = Omit<T, never>
+export type Expand<T> = Omit<T, never>
